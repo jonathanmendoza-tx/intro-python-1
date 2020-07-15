@@ -31,3 +31,24 @@ import sys
 import calendar
 from datetime import datetime
 
+args = sys.argv
+
+l = len(args)
+
+if l == 1:
+	month = datetime.now().month
+	year = datetime.now().year
+
+elif l == 2:
+	month = int(args[1])
+	year = datetime.now.year
+
+elif l == 3:
+	month = int(args[1])
+	year = int(args[2])
+
+else:
+	print('Does not compute.')
+
+cal = calendar.TextCalendar()
+cal.prmonth(year, month)
